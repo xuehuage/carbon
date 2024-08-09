@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 
-import { Form,Field ,Button,Picker ,Popup,List ,Cell,Col, Row,Toast,PullRefresh } from 'vant';
+import { Form,Field ,Button,Picker ,Popup,List ,Cell,Col, Row,Toast,PullRefresh,Icon,Loading ,Overlay } from 'vant';
 import { utils, floatObj } from '@/utils/utils'
 import dayjs from "dayjs"
 import { api_name } from '@/api/api'
@@ -35,6 +35,9 @@ Vue.use(Row);
 Vue.use(Col);
 Vue.use(Toast);
 Vue.use(PullRefresh);
+Vue.use(Icon);
+Vue.use(Loading);
+Vue.use(Overlay);
 
 Vue.config.productionTip = false
 

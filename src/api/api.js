@@ -6,14 +6,14 @@ const api_name = {
    * 查询代币类型
    */
   getTokenTransferLogs: () => {
-      return fetch.get(`${config.baseUrl}/v1/token-transfer-logs/type`);
+      return fetch.get(`${config.baseUrl}/v1/coin-transfer/coin/list`);
   },
 
    /** 
-   * 分页列表
+   * 提交转账(未补齐)
    */
-  getTokenTransferPages: (params) => {
-      return fetch.get(`${config.baseUrl}/v1/token-transfer-logs/page`,{ params: qs.stringify(params)});
+  submitTransition: (params) => {
+      return fetch.get(`${config.baseUrl}/v1/coin-transfer/batch`,{ params: qs.stringify(params)});
   },
   
 }

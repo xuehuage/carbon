@@ -11,6 +11,7 @@
 }
 
 body {
+
   /* font-family: "Microsoft Yahei","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","WenQuanYi Micro Hei","Microsoft YaHei UI",sans-serif; */
 font-family: Source Han Sans CN;
     /* color: #333; */
@@ -21,6 +22,8 @@ font-family: Source Han Sans CN;
 
 html,body{
   height: auto;
+    background-color: #f2f2f2;
+
 }
 button{
     /* font-family: Arial,'Microsoft Yahei',sans-serif;  */
