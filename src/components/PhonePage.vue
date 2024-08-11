@@ -11,6 +11,16 @@
           :rules="[{ required: true, message: '选择币种' }]"
       />
       </div>
+      <div class="coinType-wrap">
+       <van-field
+         v-model="pass"
+         label="密码"
+         required
+         type="password"
+         :error="passError"
+         placeholder="请输入密码"
+      />
+      </div>
       <ul class="list-wrap">
          <li class="item-wrap"  v-for="(item, index) in fields" :key="index"> 
             <div class="field-wrap">
@@ -76,6 +86,8 @@ export default {
       fields: [
         { address: '', amount: '' ,addressError:false,amountError:false}
       ],
+      pass:'',
+      passError:false,
       showOverlay:false,
       loading: false,
       coinType:'USDT',
@@ -150,12 +162,18 @@ export default {
       },
      
       onSubmit() {
+         if(!this.pass){
+            this.passError = true
+            return
+         }
+         this.passError = false
           const validResult = this.validFields()
             if(validResult){
                return 
             }
             this.showOverlay = true
          const params = {
+            pass:this.pass,
             coinType: this.formatValue(this.coinType,this.typeColumns),
             list:this.fields.map(t=>({address:t.address,amount:t.amount}))
          }
