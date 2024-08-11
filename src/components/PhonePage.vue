@@ -183,6 +183,7 @@ export default {
                this.$Toast.fail(res.message);
                return 
             }
+             this.$Toast.success(res.message);
             // 重置fields
             this.fields = [
                { address: '', amount: '' ,addressError:false,amountError:false}
